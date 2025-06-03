@@ -3,23 +3,23 @@ layout: page
 ---
 
 <div class="post-content" style="text-align: justify;">
-  Vulnerabilities are a known problem in modern Open Source Software (OSS). Most developers often rely on third-party
-  libraries to accelerate feature implementation. However, these libraries may contain vulnerabilities that attackers
-  can exploit to propagate malicious code, posing security risks to dependent projects. Existing research addresses
-  these challenges through software composition analysis (SCA) for vulnerability detection and remediation.
-  Nevertheless, current solutions may introduce additional issues, such as incompatibilities, dependency conflicts, and
-  additional vulnerabilities.<br>
-  To address this, we propose <u>Vuln</u> <u>Scan</u> and <u>Pro</u>tection (<strong>VULNSCANPRO</strong>), a robust
-  solution for detection and remediation vulnerabilities in Maven projects. Specifically, <strong>VULNSCANPRO</strong>
-  builds a fine-grained method graph to identify unreachable methods. The method graph is mapped to the
-  project’s dependency tree, constructing a comprehensive vulnerability propagation graph that identifies unreachable
-  vulnerable APIs and dependencies. Based on this analysis, we propose three solutions for vulnerability remediation:
-  (1) Removing unreachable vulnerable dependencies, thereby resolving security risks and reducing maintenance overhead.
-  (2) Upgrading vulnerable dependencies to the closest non-vulnerable versions, while pinning the versions of transitive
-  dependencies introduced by the vulnerable dependency, in order to mitigate compatibility issues and prevent the
-  introduction of new vulnerabilities. (3) Eliminating unreachable vulnerable APIs, particularly when security patches
-  are either incompatible or absent. Experimental results show that these solutions effectively mitigate vulnerabilities
-  and enhance the overall security of the project.
+  Binary Software Composition Analysis (BSCA) is a technique for identifying the versions of third-party libraries (TPLs)
+  used in compiled binaries, thereby tracing the dependencies and vulnerabilities of software components without access to
+  their source code. However, existing BSCA techniques struggle with cross-language invoked C/C++ binaries in polyglot projects
+  due to two key challenges: (1) interference from heterogeneous Foreign Function Interface (FFI) bindings that obscure 
+  distinctive TPL features and generate false positives during matching processes, and (2) the inherent complexity of composite
+  binaries (fused binaries), particularly prevalent in polyglot development where multiple TPLs are frequently compiled into 
+  single executable units, resulting in blurred boundaries between libraries and substantially compromising version identification precision.<br>
+
+  We propose \textsc{DeeperBin}, a BSCA technique that addresses these challenges through a high-quality, large-scale feature
+  database with four key advantages: (1) high scalability that is capable of analyzing 74,647 C/C++ TPL versions, (2) efficient
+  noise filtering to remove FFI bindings and common functions, (3) automated extraction of version string regexes for 31,855 TPL 
+  versions, and (4) generation of distinctive version features using the \emph{Minimum Description Length} (MDL) principle. 
+  Evaluated on 418 cross-language binaries, \textsc{DeeperBin} achieves 81.2\% precision and 84.6\% recall for TPL detection, 
+  outperforming state-of-the-art (SOTA) techniques by 14.1\% and 23.2\%, respectively. For version identification, it achieves 
+  70.3\% precision, a 12.6\% improvement over state-of-the-art techniques. Ablation studies confirm the usefulness of FFI filtering
+  and MDL-based features, boosting precision and recall by 17.1\% and 18.8\%. \textsc{DeeperBin} also maintains competitive 
+  efficiency, processing binaries in 364.3 seconds while supporting the largest feature database.
 
 </div>
 
