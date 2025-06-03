@@ -2,7 +2,7 @@
 layout: page
 ---
 
-<div class="post-content" style="text-align: justify; font-family: Verdana;">
+<div class="post-content" style="text-align: justify; font-family: Roboto; text-indent: 2em;">
   <u>B</u>inary <u>S</u>oftware <u>C</u>omposition <u>A</u>nalysis (<b>BSCA</b>) is a technique for identifying the versions of third-party libraries (TPLs)
   used in compiled binaries, thereby tracing the dependencies and vulnerabilities of software components without access to
   their source code. However, existing BSCA techniques struggle with <b>cross-language invoked C/C++ binaries in polyglot projects</b>
@@ -11,15 +11,20 @@ layout: page
   binaries (fused binaries), particularly prevalent in polyglot development where multiple TPLs are frequently compiled into 
   single executable units, resulting in blurred boundaries between libraries and substantially compromising version identification precision.<br>
 
-  We propose <span style="font-variant: small-caps;">DeeperBin</span>, a BSCA technique that addresses these challenges through a high-quality, large-scale feature
-  database with four key advantages: (1) high scalability that is capable of analyzing 74,647 C/C++ TPL versions, (2) efficient
-  noise filtering to remove FFI bindings and common functions, (3) automated extraction of version string regexes for 31,855 TPL 
-  versions, and (4) generation of distinctive version features using the \emph{Minimum Description Length} (MDL) principle. 
-  Evaluated on 418 cross-language binaries, \textsc{DeeperBin} achieves 81.2\% precision and 84.6\% recall for TPL detection, 
-  outperforming state-of-the-art (SOTA) techniques by 14.1\% and 23.2\%, respectively. For version identification, it achieves 
-  70.3\% precision, a 12.6\% improvement over state-of-the-art techniques. Ablation studies confirm the usefulness of FFI filtering
-  and MDL-based features, boosting precision and recall by 17.1\% and 18.8\%. \textsc{DeeperBin} also maintains competitive 
-  efficiency, processing binaries in 364.3 seconds while supporting the largest feature database.
+  We propose <span style="font-variant: small-caps;">DeeperBin</span>, a BSCA technique that addresses these challenges through a high-quality, 
+  large-scale feature database with four key advantages: 
+  <ul style="list-style-type: square;">
+    <li>High scalability that is capable of analyzing 74,647 C/C++ TPL versions.</li>
+    <li>Efficient noise filtering to remove FFI bindings and common functions.</li>
+    <li>Automated extraction of version string regexes for 31,855 TPL versions.</li>
+    <li>Generation of distinctive version features using the <i>Minimum Description Length</i> (MDL) principle.</li>
+  </ul>
+  
+  Evaluated on 418 cross-language binaries, <span style="font-variant: small-caps;">DeeperBin</span> achieves 81.2% precision and 84.6% recall 
+  for TPL detection, outperforming state-of-the-art techniques by 14.1% and 23.2%, respectively. For version identification, it achieves 
+  70.3% precision, a 12.6% improvement over state-of-the-art techniques. Ablation studies confirm the usefulness of FFI filtering
+  and MDL-based features, boosting precision and recall by 17.1% and 18.8%. <span style="font-variant: small-caps;">DeeperBin</span> also maintains 
+  competitive efficiency, processing binaries in 364.3 seconds while supporting the largest feature database.
 
 </div>
 
