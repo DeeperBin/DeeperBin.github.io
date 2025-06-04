@@ -6,14 +6,14 @@ layout: page
   <u>B</u>inary <u>S</u>oftware <u>C</u>omposition <u>A</u>nalysis (<b>BSCA</b>) is a technique for identifying the versions of third-party libraries (TPLs)
   used in compiled binaries, thereby tracing the dependencies and vulnerabilities of software components without access to
   their source code. However, existing BSCA techniques struggle with <b>cross-language invoked C/C++ binaries in polyglot projects</b>
-  due to two key challenges: (1) interference from heterogeneous Foreign Function Interface (FFI) bindings that obscure 
+  due to two key challenges: (1) interference from heterogeneous <i>Foreign Function Interface (FFI) bindings</i> that obscure 
   distinctive TPL features and generate false positives during matching processes, and (2) the inherent complexity of composite
-  binaries (fused binaries), particularly prevalent in polyglot development where multiple TPLs are frequently compiled into 
+  binaries (<i>fused binaries</i>), particularly prevalent in polyglot development where multiple TPLs are frequently compiled into 
   single executable units, resulting in blurred boundaries between libraries and substantially compromising version identification precision.<br>
 
   &emsp;We propose <b><span style="font-variant: small-caps;">DeeperBin</span>, a BSCA technique that addresses these challenges through a high-quality, 
   large-scale feature database with four key advantages: </b>
-  <ul style="list-style-type: square; margin-bottom: 1em;">
+  <ul style="list-style-type: square; margin-bottom: 0.5em;">
     <li><b>High scalability</b> that is capable of analyzing 74,647 C/C++ TPL versions.</li>
     <li><b>Efficient noise filtering</b> to remove FFI bindings and common functions.</li>
     <li><b>Automated extraction of version string regexes</b> for 31,855 TPL versions.</li>
