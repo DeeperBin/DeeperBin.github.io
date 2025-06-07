@@ -39,7 +39,7 @@ DeeperBin is a binary software composition analysis (BSCA) tool designed to dete
       
     - Import both collections into your local MongoDB instance (ip: "localhost", port: 27017).
 
-4. Run DeeperBin
+4. Run **DeeperBin**
 
    Open a command line window in the directory where **deeperbin.exe** is located and run:
 
