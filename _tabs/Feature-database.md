@@ -1,11 +1,11 @@
 ---
 # the default layout is 'page'
-icon: fas fa-info-circle
-order: 3
+icon: fas database
+order: 2
 ---
 ## Feature Database
 
-[**Download the Feature Database of DeeperBin**](https://github.com/DeeperBin/DeeperBin.github.io/blob/main/data/feature_database_samples.7z)
+[**Download the Feature Database of DeeperBin**](https://github.com/DeeperBin/DeeperBin.github.io/blob/main/data/deeperbin-demo-db.7z)
 
 ### Binary features in `DeeperBin.Feature_Group_Demo` collection
 
