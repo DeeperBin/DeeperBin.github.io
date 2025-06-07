@@ -1,6 +1,6 @@
 ---
 # the default layout is 'page'
-icon: fas database
+icon: fas fa-file
 order: 2
 ---
 ## Feature Database
