@@ -1,7 +1,7 @@
 ---
 # the default layout is 'page'
-icon: fas fa-info-circle
-order: 2
+icon: fas list-check
+order: 3
 ---
 ## Ground-truth Dataset
 
